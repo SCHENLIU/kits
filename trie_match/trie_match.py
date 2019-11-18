@@ -51,15 +51,15 @@ if __name__ == "__main__":
 
     dataprocesor = dataprocess()
     article_list = dataprocesor.read_json("esg1111.json")
-    namedict = {"esg":"esg",
-                "gongsizhili": "公司治理",
-                "huanjingbaohu": "环境保护",
-                "jingzhunfupin": "精准扶贫",
-                "shehuizeren": "社会责任",
-                "xiangcunzhenxing": "乡村振兴",
-                "zhengcexueshu": "政策学术",
+    namedict = {"filename0":"name0",
+                "filename1": "name1",
+                "filename2": "name2",
+                "filename3": "name3",
+                "filename4": "name4",
+                "filename5": "name5",
+                "filename6": "name6",
                 }
-    rex = re.compile("季度|\(.{8}\)|\(.{6}\)")
+    rex = re.compile("测试")
 
     start = time.time()
     save_data_1 = []
@@ -86,10 +86,7 @@ if __name__ == "__main__":
     print(len(save_data_1))
     print(len(save_data_2))
 
-
-
-
-    with open("esg_test1111.tsv", "w", encoding="utf-8") as fw:
+    with open("filename.tsv", "w", encoding="utf-8") as fw:
         sta_test = collections.defaultdict(lambda :100)
         data_test = []
         for i in range(len(tuple_list)):
